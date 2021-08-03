@@ -1,0 +1,29 @@
+.teams {
+    height: 100vh;
+    width: 100%;
+}
+.team-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.club-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-badge {
+    margin: 50px;
+}
+
+.club-logo {
+    width: 100px;
+    height: 100px;
+    transition: all .5s ease-in-out; 
+    
+}
+
+.club-logo:hover { transform: scale(1.5); }
