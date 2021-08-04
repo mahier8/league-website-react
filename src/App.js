@@ -1,23 +1,40 @@
 import Navbar from "./components/Navbar/Navbar";
 import "./app.css";
-import Intro from "./components/Intro/Intro";
-import Teams from "./components/Teams/Teams";
-import Tables from "./components/Tables/Tables";
-import Social from "./components/Social/Social";
-import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// pages
+import Home from "./pages/Home/Home";
+import Fixtures from "./pages/Fixtures/Fixtures";
+import Signup from "./pages/Signup/Signup";
+import Standings from "./pages/Standings/Standings";
+import TeamInfo from "./pages/TeamInfo/TeamInfo";
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <div className="sections">
-        <Intro />
-        <Teams />
-        <Tables />
-        <Social />
-        <Footer />
+    <Router>
+      <div className="app">
+        <Navbar />
+        <Switch>
+          <div className="sections">
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/signup">
+              <Signup />
+            </Route>
+            <Route path="/teaminfo">
+              <TeamInfo />
+            </Route>
+            <Route path="/fixtures">
+              <Fixtures />
+            </Route>
+            <Route path="/standings">
+              <Standings />
+            </Route>
+          </div>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 
