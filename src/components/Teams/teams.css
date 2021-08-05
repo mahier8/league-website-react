@@ -22,8 +22,8 @@
 .club-logo {
     width: 100px;
     height: 100px;
-    transition: all .5s ease-in-out; 
+    transition: all .4s ease-in-out; 
     
 }
 
-.club-logo:hover { transform: scale(1.5); }
+.club-logo:hover { transform: scale(1.3); }
